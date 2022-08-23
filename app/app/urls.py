@@ -23,6 +23,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/schema/', SpectacularSwaggerView(), name='api-schema'),
-    path('api/docs/', SpectacularAPIView.as_view(url_name='api-schema'), name='api-docs'),
+    path('api/schema/', SpectacularAPIView(), name='api-schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='api-schema'), name='api-docs'),
 ]
